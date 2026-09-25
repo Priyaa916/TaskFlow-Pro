@@ -1,0 +1,33 @@
+# Java / Spring Boot
+target/
+*.class
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Large files
+*.zip
+*.jar
+*.war
