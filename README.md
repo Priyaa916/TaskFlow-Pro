@@ -454,6 +454,70 @@ would create a cycle.
 The backend rejects such a dependency instead of allowing an invalid DAG.
 
 ---
+## Data Model
+
+TaskFlow Pro uses a relational PostgreSQL data model centered around tasks and their dependency relationships.
+
+### Task
+
+Each task represents a unit of work in the workflow.
+
+Key task information includes:
+
+* Task ID
+* Task title
+* Description
+* Workflow status
+* Start date
+* End date
+* Duration
+* Priority and workflow-related metadata
+
+### Dependency
+
+A dependency represents a directed relationship between two tasks.
+
+The relationship follows:
+
+**Prerequisite Task → Dependent Task**
+
+For example:
+
+**Database Schema → Backend API → Integration Tests**
+
+This means the Backend API depends on the Database Schema, while Integration Tests depend on the Backend API.
+
+The backend validates dependency creation and prevents circular dependencies.
+
+### Workflow State
+
+Task status is managed through workflow states such as:
+
+* BACKLOG
+* IN_PROGRESS
+* REVIEW
+* DONE
+* READY
+* BLOCKED
+
+READY/BLOCKED behavior is determined using the task's prerequisite dependencies and their completion state.
+
+### Relationship Model
+
+The core relationship can be represented as:
+
+**Task (Prerequisite) → Dependency → Task (Dependent)**
+
+This dependency graph is used by the backend for:
+
+* Dependency validation
+* Circular dependency detection
+* READY/BLOCKED calculation
+* Downstream impact analysis
+* Schedule propagation
+
+The PostgreSQL database stores the persistent task and dependency information, while the Spring Boot backend applies the workflow and dependency rules.
+
 
 # 🔍 Key Assumptions and Limitations
 
