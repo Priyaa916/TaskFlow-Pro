@@ -616,3 +616,38 @@ AI-powered dependency-aware workflow management for intelligent project executio
 
 **GitHub Repository:**
 https://github.com/Priyaa916/TaskFlow-Pro
+## 🚀 Live Demo
+
+**Live Application:**
+https://taskflow-pro-rho-three.vercel.app/
+
+The deployed application includes the React frontend, Spring Boot backend, and PostgreSQL database.
+
+## 🎥 Demo Video
+
+**Project Demo:**
+https://youtu.be/59YzyBABM-c
+
+The demo video walks through the core TaskFlow Pro workflow, including task management, dependencies, Ready/Blocked states, and dependency-aware scheduling.
+
+## 🤖 AI Copilot
+
+TaskFlow Pro includes an AI Copilot powered by **Ollama + Llama 3.2 3B** for AI-assisted task analysis.
+
+> **Note:** The AI Copilot currently depends on a locally running Ollama instance and is therefore intended for the local development environment. The core task-management and dependency features are available in the deployed application.
+
+## 🌐 Deployment
+
+| Component  | Technology            | Deployment |
+| ---------- | --------------------- | ---------- |
+| Frontend   | React + Vite          | Vercel     |
+| Backend    | Spring Boot / Java    | Render     |
+| Database   | PostgreSQL            | Render     |
+| AI Copilot | Ollama + Llama 3.2 3B | Local      |
+
+### Live URLs
+
+* **Frontend:** https://taskflow-pro-rho-three.vercel.app/
+* **Backend API:** https://taskflow-pro-d2dp.onrender.com
+* **Demo Video:** https://youtu.be/59YzyBABM-c
+
