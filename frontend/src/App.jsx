@@ -2,8 +2,8 @@
 import axios from "axios";
 import "./App.css";
 
-const API_URL = "http://localhost:8080/api/tasks";
-const AI_API_URL = "http://localhost:8080/api/ai/analyze";
+const API_URL = "https://taskflow-pro-d2dp.onrender.com/api/tasks";
+const AI_API_URL = "https://taskflow-pro-d2dp.onrender.com/api/ai/analyze";
 
 const COLUMNS = [
   {
