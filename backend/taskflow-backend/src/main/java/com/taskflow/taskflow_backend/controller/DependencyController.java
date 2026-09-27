@@ -8,7 +8,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/dependencies")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://taskflow-pro-rho-three.vercel.app"
+})
 public class DependencyController {
 
     private final DependencyService dependencyService;

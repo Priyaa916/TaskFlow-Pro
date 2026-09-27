@@ -7,7 +7,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/ai")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://taskflow-pro-rho-three.vercel.app"
+})
 public class AIController {
 
     private final AIService aiService;
