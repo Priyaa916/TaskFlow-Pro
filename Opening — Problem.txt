@@ -1,0 +1,159 @@
+Opening — Problem
+
+Start with:
+
+“Traditional Kanban boards show what tasks exist, but they don't understand how tasks depend on each other. If one task gets delayed, it's difficult to immediately know which downstream tasks will be affected.”
+
+Then:
+
+“TaskFlow Pro solves this by combining a dependency-aware Kanban board, a DAG-based workflow engine, schedule propagation, impact analysis, and an AI Workflow Copilot.”
+
+2️⃣ Dashboard
+
+Dashboard open karo.
+
+Point out:
+
+Total Tasks
+Ready
+Blocked
+Completed
+Scheduled
+AI Powered
+
+Say:
+
+“This dashboard gives an instant overview of the current workflow state.”
+
+Don't spend too much time here.
+
+3️⃣ Kanban — Main Feature
+
+Go to Kanban.
+
+Show:
+
+Backlog
+In Progress
+Review
+Done
+
+Then point to your tasks.
+
+Say:
+
+“Unlike a normal Kanban board, TaskFlow Pro doesn't rely only on manually assigned status. Dependency relationships influence whether a task is actually ready to execute.”
+
+Then show Integration Tests = BLOCKED.
+
+Say:
+
+“Integration Tests is blocked because its prerequisite, Backend API, has not been completed yet.”
+
+🔥 This is one of your strongest demo points.
+
+4️⃣ DAG — Dependency Intelligence
+
+Go to DAG.
+
+Show:
+
+Database Schema
+       ↓
+Backend API
+       ↓
+Integration Tests
+
+Say:
+
+“The same workflow is represented as a Directed Acyclic Graph. The arrows represent prerequisite-to-dependent relationships.”
+
+Then:
+
+“The backend also prevents circular dependencies, so the workflow always remains a valid DAG.”
+
+5️⃣ Schedule Propagation
+
+Now show the schedule information.
+
+Say:
+
+“The system also connects dependencies with scheduling. When an upstream task changes, downstream tasks can be recalculated according to the dependency chain.”
+
+You don't need to actually modify anything during the demo unless you want to.
+
+6️⃣ 💥 Impact Analysis
+
+Show the impact/downstream information for Backend API.
+
+Say:
+
+“We can also determine the downstream impact of a task. Here, Integration Tests is directly affected by Backend API.”
+
+Point out:
+
+Direct downstream task
+Integration Tests
+7️⃣ 🤖 AI Copilot — Finish Strong
+
+This should be your final major feature.
+
+Ask:
+
+What happens if Backend API is delayed by 3 days?
+
+Your current response already demonstrates:
+
+Backend API
+IN_PROGRESS
+
+Integration Tests
+Direct downstream task
+Blocked
+
+Delay impact
+3 days
+
+Say:
+
+“Instead of manually tracing the dependency graph, the user can simply ask the AI Workflow Copilot what will happen.”
+
+Then:
+
+“The Copilot receives the relevant live task and dependency data from the backend and uses a locally running Llama 3.2 3B model through Ollama to generate the analysis.”
+
+And importantly:
+
+“The AI provides analysis and projections; it does not directly modify the workflow database.”
+
+8️⃣ Closing — Your One-Line USP
+
+End with:
+
+“So TaskFlow Pro doesn't just tell you what tasks exist — it tells you what can be worked on, what is blocked, and what will be affected when something changes.”
+
+🔥 That's your closing line.
+
+🧠 Your Demo Flow
+
+Remember just this:
+
+PROBLEM
+   ↓
+DASHBOARD
+   ↓
+KANBAN
+   ↓
+DAG
+   ↓
+READY / BLOCKED
+   ↓
+SCHEDULE
+   ↓
+IMPACT
+   ↓
+AI COPILOT
+   ↓
+CLOSING
+
+Don't start by explaining the code. Start with the problem and demonstrate the solution visually.
